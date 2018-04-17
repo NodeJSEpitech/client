@@ -18,7 +18,7 @@ import Signin from './pages/signin/signin';
 
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 
-import * as reducers from './reducers' // Or wherever you keep your reducers
+import authentication_reducer from './modules/authentication/reducer' // Or wherever you keep your reducers
 import registerServiceWorker from './registerServiceWorker';
 //ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -32,7 +32,7 @@ const middleware = routerMiddleware(history)
 // Also apply our middleware for navigating
 const store = createStore(
     combineReducers({
-        ...reducers,
+        authentication_reducer,
         router: routerReducer
     }),
     applyMiddleware(middleware)

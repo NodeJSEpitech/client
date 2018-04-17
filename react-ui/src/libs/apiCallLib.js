@@ -87,8 +87,8 @@ class ApiCallLib {
     const options = {
       headers: this._getHeaders(dataToSend),
       protocol: 'https',
-      host: "je sais pas heroku un truc comme ca",
-      port: "je sais pas 8000 un truc comme ca",
+      host: "https://epiblog-api.herokuapp.com/",
+      port: 440,
       path: path,
       method: method
     };
