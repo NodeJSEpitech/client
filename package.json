@@ -1,0 +1,22 @@
+{
+  "name": "epi-blog",
+  "version": "1.0.0",
+  "description": "A blog for epitech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeJSEpitech/client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NodeJSEpitech/client/issues"
+  },
+  "homepage": "https://github.com/NodeJSEpitech/client#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
