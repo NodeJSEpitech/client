@@ -48,7 +48,7 @@ class Home extends Component {
   componentWillReceiveProps(nextProps) {
   }
 
-  _renderPosts(posts) {
+  _renderPosts(posts, history) {
     if (!posts || posts.length === 0) {
       return (
         <div> no posts founds </div>
@@ -58,7 +58,7 @@ class Home extends Component {
       return (
         <PostMiniature
           post={post}
-          handleViewPress={this._handlePostView.bind(this, post.id)}
+          handleViewPress={this._handlePostView.bind(this, post.id, history)}
           key={`PostMiniature_${index}`}
         />
       )
@@ -66,13 +66,14 @@ class Home extends Component {
     return children;
   }
 
-  _handlePostView(postId) {
+  _handlePostView(postId, history) {
     console.log("redirect à l'event : " + postId);
 
-    //this.redirect(`/posts/${postId}`);
+    history.push(`/post/${postId}`);
   }
 
   render() {
+    
     return (
       <div>
         <MuiThemeProvider>
@@ -87,7 +88,7 @@ class Home extends Component {
                 style={style.headers}
               />
               <CardMedia style={style.inputStyle}>
-                {this._renderPosts(this.state.posts)}
+                {this._renderPosts(this.state.posts, this.props.history)}
               </CardMedia>
             </Card>
           </div>

@@ -46,8 +46,8 @@ ReactDOM.render(
     { /* ConnectedRouter will use the store from Provider automatically */ }
     <ConnectedRouter history={history}>
       <div>
-        <Route exact path="/" component={Home}/>
-        <Route path="/post" component={PostDetail}/>
+        <Route exact path="/" component={Home} history={history}/>
+        <Route path="/post/:postId" component={PostDetail}/>
         <Route path="/signin" component={Signin}/>
       </div>
     </ConnectedRouter>
