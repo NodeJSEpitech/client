@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import logo from '../../logo.svg';
 import './post_detail.css';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import ChatWindow from '../../components/chat_window';
 
 class PostDetail extends Component {
   constructor() {
@@ -79,6 +80,7 @@ class PostDetail extends Component {
                 </CardText>
             </Card>
           </div>
+          <ChatWindow/>
         </MuiThemeProvider>
       </div>
     );
