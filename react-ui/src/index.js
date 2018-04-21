@@ -1,15 +1,10 @@
-
-
-
-
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createHashHistory'
 import { Route } from 'react-router'
 
 import Home from './pages/home/home';
@@ -22,7 +17,7 @@ import authentication_reducer from './modules/authentication/reducer' // Or wher
 import registerServiceWorker from './registerServiceWorker';
 //ReactDOM.render(<App />, document.getElementById('root'));
 
-// Create a history of your choosing (we're using a browser history in this case)
+// Create a history of your choosing (we're using a Hash history in this case)
 const history = createHistory()
 
 // Build the middleware for intercepting and dispatching navigation actions
